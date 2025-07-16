@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WDJWWKVN');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Google tag (gtag.js) for GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ4KWT93HB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-KZ4KWT93HB');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FXLeadsPro | Premium Forex & Crypto Trading Leads & Signals</title>
@@ -695,42 +678,6 @@
             font-size: 0.9rem;
         }
         
-        /* GA4 Tracking Indicator */
-        .ga4-indicator {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #4285F4;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 30px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            z-index: 10000;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(66, 133, 244, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(66, 133, 244, 0); }
-        }
-        
-        .ga4-indicator .icon {
-            width: 24px;
-            height: 24px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4285F4;
-            font-weight: bold;
-        }
-        
         /* Responsive */
         @media (max-width: 992px) {
             .custom-leads-container {
@@ -769,28 +716,10 @@
             .custom-leads-form {
                 padding: 25px;
             }
-            
-            .ga4-indicator {
-                bottom: 10px;
-                right: 10px;
-                font-size: 12px;
-                padding: 8px 12px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDJWWKVN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- GA4 Tracking Indicator -->
-    <div class="ga4-indicator">
-        <div class="icon">G4</div>
-        <span>GA4 Tracking Active</span>
-    </div>
-    
     <!-- Trading Background -->
     <div class="trading-bg"></div>
     <div class="chart-grid"></div>
@@ -963,30 +892,30 @@
             
             <div class="custom-leads-form">
                 <h3>Request Custom Leads</h3>
-                <form id="leadsForm">
+                <form id="leadsForm" action="https://formspree.io/f/xqkrvpkg" method="POST">
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="brokerage">Brokerage Name</label>
-                        <input type="text" id="brokerage" class="form-control" placeholder="Enter brokerage name" required>
+                        <input type="text" id="brokerage" name="brokerage" class="form-control" placeholder="Enter brokerage name" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="Enter phone number" required>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="leadType">Lead Type</label>
-                        <select id="leadType" class="form-control" required>
+                        <select id="leadType" name="leadType" class="form-control" required>
                             <option value="" disabled selected>Select Lead Type</option>
                             <option value="forex">Forex Trading Leads</option>
                             <option value="crypto">Cryptocurrency Leads</option>
@@ -998,7 +927,7 @@
                     
                     <div class="form-group">
                         <label for="leadVolume">Monthly Lead Volume Needed</label>
-                        <select id="leadVolume" class="form-control" required>
+                        <select id="leadVolume" name="leadVolume" class="form-control" required>
                             <option value="" disabled selected>Select Volume</option>
                             <option value="50-100">50-100 Leads</option>
                             <option value="100-500">100-500 Leads</option>
@@ -1035,8 +964,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Telegram Channel</h4>
-                                <!-- Hidden Telegram channel link -->
-                                <a href="https://t.me/cryptoforexlead" target="_blank">@cryptoforexlead</a>
+                                <a href="https://t.me/cryptoforexlead" target="_blank">Telegram</a>
                             </div>
                         </div>
                         
@@ -1046,7 +974,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>WhatsApp</h4>
-                                <a href="https://wa.me/8801824219091" target="_blank">+880 1824 219091</a>
+                                <a href="https://wa.me/8801824219091" target="_blank">WhatsApp</a>
                             </div>
                         </div>
                         
@@ -1056,7 +984,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Telegram ID</h4>
-                                <a href="https://t.me/mr_robert009" target="_blank">@mr_robert009</a>
+                                <a href="https://t.me/mr_robert009" target="_blank">Telegram</a>
                             </div>
                         </div>
                         
@@ -1066,7 +994,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email Address</h4>
-                                <a href="mailto:forexspecialist.9900@gmail.com">forexspecialist.9900@gmail.com</a>
+                                <a href="mailto:forexspecialist.9900@gmail.com">Email</a>
                             </div>
                         </div>
                     </div>
@@ -1074,25 +1002,25 @@
                 
                 <div class="contact-form">
                     <h3 style="color: white; margin-bottom: 20px;">Send us a Message</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/xqkrvpkg" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="contactEmail">Email Address</label>
-                            <input type="email" id="contactEmail" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" id="contactEmail" name="email" class="form-control" placeholder="Enter your email" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Subject of your message" required>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject of your message" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="How can we help you?" required></textarea>
                         </div>
                         
                         <button type="submit" class="cta-button">Send Message</button>
@@ -1150,11 +1078,10 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <!-- Hidden Telegram channel link -->
-                        <li><i class="fab fa-telegram"></i> <a href="https://t.me/cryptoforexlead">@cryptoforexlead</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801824219091">+880 1824 219091</a></li>
-                        <li><i class="fab fa-telegram"></i> <a href="https://t.me/mr_robert009">@mr_robert009</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:forexspecialist.9900@gmail.com">forexspecialist.9900@gmail.com</a></li>
+                        <li><i class="fab fa-telegram"></i> <a href="https://t.me/cryptoforexlead">Telegram</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801824219091">WhatsApp</a></li>
+                        <li><i class="fab fa-telegram"></i> <a href="https://t.me/mr_robert009">Telegram</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:forexspecialist.9900@gmail.com">Email</a></li>
                     </ul>
                 </div>
             </div>
@@ -1174,21 +1101,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-        
-        // Form submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you shortly.');
-            this.reset();
-        });
-        
-        // Custom leads form submission
-        document.getElementById('leadsForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const fullName = document.getElementById('fullName').value;
-            alert(`Thank you ${fullName}! Your custom lead request has been received. Our team will contact you within 24 hours to discuss your requirements.`);
-            this.reset();
         });
         
         // Generate floating crypto icons
